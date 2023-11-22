@@ -1,0 +1,5 @@
+transformers
+bitsandbytes
+trl
+wandb
+peft
