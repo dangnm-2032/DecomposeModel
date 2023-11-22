@@ -1,0 +1,35 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "field": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "entities": {
+      "feature": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "complex_question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "triplets": [
+      {
+        "question": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
