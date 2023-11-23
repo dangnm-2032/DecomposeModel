@@ -2,6 +2,7 @@ from transformers import BloomForCausalLM, AutoTokenizer
 import torch
 from peft import PeftModel
 from datasets import Dataset, load_dataset, load_from_disk
+from config import *
 
 
 ### VietCuna
@@ -38,7 +39,12 @@ Mỗi câu hỏi đơn giản được sinh ra thể hiện từng vấn đề c
 
 model_name = 'merged_model'
 
-model = BloomForCausalLM.from_pretrained(model_name).to("cuda")
+model = BloomForCausalLM.from_pretrained(
+    model_name,
+    low_cpu_mem_usage=True,
+    return_dict=True,
+    torch_dtype=torch.float16,
+    device_map={"": 0},)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 dataset = load_from_disk("question_dataset")
