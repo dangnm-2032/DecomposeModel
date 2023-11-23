@@ -1,5 +1,8 @@
-transformers
+torch
+git+https://github.com/huggingface/transformers
+datasets
+peft
 bitsandbytes
 trl
 wandb
-peft
+gdown
