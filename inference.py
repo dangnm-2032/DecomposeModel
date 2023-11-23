@@ -47,7 +47,7 @@ model = BloomForCausalLM.from_pretrained(
     device_map={"": 0},)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-dataset = load_from_disk("question_dataset")
+dataset = load_from_disk("question_dataset/question_dataset")
 train_dataset = dataset["train"]
 
 def transform(examples):
