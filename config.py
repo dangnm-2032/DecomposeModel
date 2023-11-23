@@ -48,7 +48,7 @@ fp16 = False
 bf16 = False
 
 # Batch size per GPU for training
-per_device_train_batch_size = 2
+per_device_train_batch_size = 8
 
 # Batch size per GPU for evaluation
 per_device_eval_batch_size = 1
@@ -75,7 +75,7 @@ optim = "paged_adamw_32bit"
 lr_scheduler_type = "constant"
 
 # Number of training steps (overrides num_train_epochs)
-max_steps = -1
+max_steps = 3067
 
 # Ratio of steps for a linear warmup (from 0 to learning rate)
 warmup_ratio = 0.03

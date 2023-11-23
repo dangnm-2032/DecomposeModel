@@ -87,13 +87,13 @@ training_arguments = TrainingArguments(
     fp16=fp16,
     bf16=bf16,
     max_grad_norm=max_grad_norm,
-    max_steps=14428, # the number of training steps the model will take
+    max_steps=max_steps, # the number of training steps the model will take
     warmup_ratio=warmup_ratio,
     group_by_length=group_by_length,
     lr_scheduler_type=lr_scheduler_type,
     report_to="tensorboard",
-    # do_eval=do_eval,
-    # evaluation_strategy=evaluation_strategy,
+    do_eval=do_eval,
+    evaluation_strategy=evaluation_strategy,
 )
 
 # Set supervised fine-tuning parameters
