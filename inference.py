@@ -38,10 +38,10 @@ Mỗi câu hỏi đơn giản được sinh ra thể hiện từng vấn đề c
 
 model_name = 'merged_model'
 
-model = BloomForCausalLM.from_pretrained(model_name)
+model = BloomForCausalLM.from_pretrained(model_name).to("cuda")
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-dataset = load_from_disk("/content/question_dataset")
+dataset = load_from_disk("question_dataset")
 train_dataset = dataset["train"]
 
 def transform(examples):
